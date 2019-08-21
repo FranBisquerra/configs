@@ -1,0 +1,48 @@
+[user]
+	email = 
+	name = 
+#[credential]
+	#helper = store
+[commit]
+	template = .gitmessage
+[core]
+	editor = vim
+	autocrlf = Input
+[difftool "kdiff3"]
+    path = /usr/bin/kdiff3
+    trustExitCode = false
+[difftool]
+    prompt = false
+[diff]
+    tool = kdiff3
+[mergetool "kdiff3"]
+    path = //usr/bin/kdiff3
+    trustExitCode = false
+[mergetool]
+    keepBackup = false
+[merge]
+    tool = kdiff3
+[push]
+	default = simple
+[alias]
+	wow = log --all --graph --decorate --simplify-by-decoration
+	mola = log --graph --all --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit  
+	co = checkout
+	br = branch
+	brd = branch -d
+	ci = commit
+	st = status
+	aa = add -A
+	cobr = checkout -b
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	bname = branch -m
+	rbs = rebase
+	rbsi = rebase -i
+# GIT FLOW ALIASES
+	feature-start="flow feature start"
+	feature-finish="flow feature finish"
+	hotfix-start="flow hotfix start"
+	hotfix-finish="flow hotfix finish"
+[pull]
+	rebase = true
